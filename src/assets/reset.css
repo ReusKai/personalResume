@@ -70,3 +70,14 @@ q:before, q:after, blockquote:before, blockquote:after {
     font-family: myFirstFont;
     src: url("./font/myFirstFont.ttf")
 }
+
+@font-face {
+    font-family: mySecondFont;
+    src: url("./font/mySecondFont.ttf")
+}
+
+@font-face {
+    font-family: myThirdFont;
+    src: url("./font/myThirdFont.ttf")
+}
+

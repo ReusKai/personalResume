@@ -31,9 +31,14 @@ export default {
     top: 20px;
     font-size: 20px;
     border-radius: 5px;
-    font-family: "myFirstFont"
+    font-family: myFirstFont,mySecondFont,myThirdFont,"微软雅黑",SimSun,"宋体",sans-serif;
 }
 .my-name{
     font-size: 25px;
+    background: rgba(0,0,0,.7);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: mySecondFont,myThirdFont,"微软雅黑",SimSun,"宋体",sans-serif;
 }
 </style>

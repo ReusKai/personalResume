@@ -27,10 +27,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .first-bg{
-        background: url("~@/assets/image/bg02.jpg") center no-repeat;
+        background: url("~@/assets/image/bg04.jpg") center no-repeat;
         width: 100%;
         height: 100%;
-        /*background-size: contain;*/
+        background-size: cover;
         background-attachment: fixed;
         position: relative;
 

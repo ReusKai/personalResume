@@ -3,6 +3,9 @@
         <el-carousel :height="winH" direction="vertical" :autoplay="false" :loop="false">
             <el-carousel-item v-for="(item,index) in pageArr" :key="index" :style="{backgroundColor: item.bg}">
                 <firstPage v-if="item.page === 0"></firstPage>
+                <secondPage v-if="item.page === 1"></secondPage>
+              <!--   <firstPage v-if="item.page === 2"></firstPage>
+                <firstPage v-if="item.page === 3"></firstPage> -->
             </el-carousel-item>
         </el-carousel>
     </div>
@@ -10,6 +13,7 @@
 
 <script>
 import firstPage from '@/components/firstPage'
+import secondPage from '@/components/secondPage'
 export default {
     name: 'HelloWorld',
     data () {
@@ -29,7 +33,7 @@ export default {
         }
     },
     components:{
-        firstPage
+        firstPage,secondPage
     }
 }
 </script>
