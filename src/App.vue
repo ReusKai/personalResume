@@ -58,7 +58,7 @@ export default {
         background-attachment: fixed;
         position: relative;
     }
-    .bg:after{
+    .bg:before{
         content: "";
         position: absolute;
         width: 100%;

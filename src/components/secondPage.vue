@@ -57,6 +57,7 @@ export default {
         left: 50%;
         transform: translateX(-50%);
         font-family: myFirstFont,"微软雅黑",SimSun,"宋体",sans-serif;
+        white-space: nowrap;
 
     }
     .lines rt{

@@ -5,7 +5,8 @@
                 <firstPage v-if="item.page === 0"></firstPage>
                 <secondPage v-if="item.page === 1"></secondPage>
                 <thirdPage v-if="item.page === 2"></thirdPage>
-                <!-- <firstPage v-if="item.page === 3"></firstPage> -->
+                <fouthPage v-if="item.page === 3"></fouthPage>
+                <fifthPage v-if="item.page === 4"></fifthPage>
             </el-carousel-item>
         </el-carousel>
     </div>
@@ -15,6 +16,8 @@
 import firstPage from '@/components/firstPage'
 import secondPage from '@/components/secondPage'
 import thirdPage from '@/components/thirdPage'
+import fouthPage from '@/components/fouthPage'
+import fifthPage from '@/components/fifthPage'
 export default {
     name: 'HelloWorld',
     data () {
@@ -25,6 +28,7 @@ export default {
                 {bg: "#f60",page: 1},
                 {bg: "#a83",page: 2},
                 {bg: "#0aa",page: 3},
+                {bg: "#7f6",page: 4},
             ]
         }
     },
@@ -34,7 +38,7 @@ export default {
         }
     },
     components:{
-        firstPage,secondPage,thirdPage
+        firstPage,secondPage,thirdPage,fouthPage,fifthPage
     }
 }
 </script>

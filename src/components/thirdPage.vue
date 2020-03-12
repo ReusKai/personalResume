@@ -1,6 +1,7 @@
 <template>
     <div class="bg">
-        <div ref="skillPie"></div>
+        <div>知识技能</div>
+        <div ref="skillPie" class="skill-chart" style=""></div>
     </div>
 </template>
 
@@ -10,27 +11,119 @@ export default {
     data () {
         return {}
     },
-    method:{
+    methods:{
         makeEcharts(){
             this.$echarts.init(this.$refs['skillPie']).setOption({
-                title: {
-                    text: 'ECharts 入门示例'
-                },
                 tooltip: {},
                 xAxis: {
-                    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+                    data: ["企业", "农专", "个体"],
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false,
+                        textStyle: {
+                            color: '#e54035'
+                        }
+                    }
                 },
-                yAxis: {},
+                yAxis: {
+                    splitLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false
+                    }
+                },
                 series: [{
-                    name: '销量',
+                    name: '年报上报率3',
+                    type: 'pictorialBar',
+                    symbolSize: [100, 45],
+                    symbolOffset: [0, -20],
+                    z: 12,
+                    itemStyle: {
+                        normal: {
+                            color: '#14b1eb'
+                        }
+                    },
+                    data: [{
+                        value: 100,
+                        symbolPosition: 'end'
+                    }, {
+                        value: 50,
+                        symbolPosition: 'end'
+                    }, {
+                        value: 20,
+                        symbolPosition: 'end'
+                    }]
+                }, {
+                    name: '年报上报率2',
+                    type: 'pictorialBar',
+                    symbolSize: [100, 45],
+                    symbolOffset: [0, 20],
+                    z: 12,
+                    itemStyle: {
+                        normal: {
+                            color: '#14b1eb'
+                        }
+                    },
+                    data: [100, 50, 20]
+                }, {
+                    name: '年报上报率1',
+                    type: 'pictorialBar',
+                    symbolSize: [150, 75],
+                    symbolOffset: [0, 37],
+                    z: 11,
+                    itemStyle: {
+                        normal: {
+                            color: 'transparent',
+                            borderColor: '#14b1eb',
+                            borderWidth: 5
+                        }
+                    },
+                    data: [100, 50, 20]
+                }, {
+                    name: '年报上报率',
+                    type: 'pictorialBar',
+                    symbolSize: [200,100],
+                    symbolOffset: [0, 50],
+                    z: 10,
+                    itemStyle: {
+                        normal: {
+                            color: 'transparent',
+                            borderColor: '#14b1eb',
+                            borderType: 'dashed',
+                            borderWidth: 5
+                        }
+                    },
+                    data: [100, 50, 20]
+                }, {
                     type: 'bar',
-                    data: [5, 20, 36, 10, 10, 20]
+                    itemStyle: {
+                        normal: {
+                            color: '#14b1eb',
+                            opacity: .7
+                        }
+                    },
+                    silent: true,
+                    barWidth: 100,
+                    barGap: '-100%', // Make series be overlap
+                    data: [100, 50, 20]
                 }]
             })
         }
     },
-    computed:{
-
+    mounted:function () {
+        this.makeEcharts();
     }
 }
 </script>
@@ -41,5 +134,14 @@ export default {
         background: url("~@/assets/image/bg01.jpg") center no-repeat;
         background-size: cover;
         background-attachment: fixed;
+    }
+    .skill-chart{
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 251;
     }
 </style>
