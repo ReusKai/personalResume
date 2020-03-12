@@ -1,5 +1,5 @@
 <template>
-    <div class="first-bg">
+    <div class="bg">
         <div class="center-info">
             <div class="info-title">Hello, I'm ReusKai </div>
             <div class="info-phrase">Good good study , day day up!!!</div>
@@ -14,9 +14,7 @@
 export default {
     name: 'HelloWorld',
     data () {
-        return {
-            msgg: "dddddddddddddddddddddd"
-        }
+        return {}
     },
     computed:{
 
@@ -26,16 +24,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .first-bg{
+    .bg{
         background: url("~@/assets/image/bg02.jpg") center no-repeat;
         width: 100%;
         height: 100%;
-        /*background-size: contain;*/
+        background-size: cover;
         background-attachment: fixed;
         position: relative;
-
     }
-    .first-bg:after{
+    .bg:after{
         content: "";
         position: absolute;
         width: 100%;
@@ -64,7 +61,7 @@ export default {
     }
     .center-info:hover{
         background: rgba(222,222,222,.7);
-        border: 2px solid rgba(200,200,200,.7);
+        box-shadow: 0 0 5px 5px rgba(0,0,0,.2);
         transition: background 2s ease
     }
 </style>
